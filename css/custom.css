@@ -1,0 +1,33 @@
+body {
+	border: 10px solid #183460;
+	border-width: 50px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px 20px 10px 10px;
+}
+
+button {
+	text-decoration: none;
+    font-size: 15px;
+    border: 1px solid green;
+    border-width: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:active {
+    color: green;
+}
+
+button:hover {
+    color: magenta;
+}
+
+#borderaround {
+    border: 10px solid yellow;
+    border-width: 5px;
+    border-radius: 10px;
+    background-color: yellow;
+}
