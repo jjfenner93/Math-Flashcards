@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+ 
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+        <title>Subtraction Flashcards</title>
+        
+        <script>
+        
+            var number1 = Math.floor((Math.random() * 10) + 1);
+            var number2 = Math.floor((Math.random() * 10) + 1);
+            var correctAnswer = number1 - number2;
+        
+        </script>
+    
+    </head>
+ 
+<body>
+
+    <navbar>
+        
+        <a href="addition.html">Addition</a> |
+        <a href="subtraction.html">Subtraction</a> |
+        <a href="multiplication.html">Multiplication</a> |
+        <a href="division.html">Division</a> 
+        
+    </navbar>
+    
+    <h1>Subtraction Flashcards</h1>
+    
+        <h1 id="numbers">
+        
+        <script>
+            
+            document.write(number1 + " - " + number2);
+            
+        </script>
+        
+        </h1>
+        
+        <input id="answer">
+        <button type="button" onclick="userAnswer();">Submit Answer</button>
+        <button type="button" onclick="nextCard();">Next Card</button>
+        <p id="output"></p>
+    
+		<script src="js/jquery-3.4.1.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+        <script>
+            
+            function userAnswer() {
+                
+                var userAnswer = document.getElementById("answer").value;
+                
+                if (isNaN(userAnswer)) {output = "Hey! That's not a number, try again!";} else {
+                    
+                    if (userAnswer == correctAnswer) {output = "Correct! " + number1 + " - " + number2 + " = " + correctAnswer + ".";} else {output = "Wrong " + number1 + " - " + number2 + " is not " + userAnswer + ".";}
+                    
+                }
+                
+                document.getElementById("output").innerHTML = output;
+                
+            }
+            
+            function nextCard() {
+                
+                document.getElementById("output").innerHTML = "";            
+                document.getElementById("answer").value = "";
+                number1 = Math.floor((Math.random() * 10) + 1);
+                number2 = Math.floor((Math.random() * 10) + 1);
+                correctAnswer = number1 - number2;
+                document.getElementById("numbers").innerHTML = (number1 + " - " + number2); 
+                
+            }
+            
+        </script>
+	</body>
+</html>
