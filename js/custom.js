@@ -1,6 +1,6 @@
 "use strict";
 
-	let addition, subtraction, multiplication, division = true;
+let addition, subtraction, multiplication, division = true;
 	let number1 = Math.floor((Math.random() * 10) + 1);
     let number2 = Math.floor((Math.random() * 10) + 1);
     let correctAnswer = number1 + number2;
@@ -8,7 +8,7 @@
 	addition = true;
 	document.querySelector("#numbers").innerHTML = (number1 + " + " + number2);
 
-	document.querySelectorAll("button").forEach(function (el) {
+	document.querySelectorAll("button").forEach(function(el) {
 		el.addEventListener("click", function() {
 		if (this.id === "addition") {
 			addition = true;
@@ -39,7 +39,7 @@
 			subtraction = false;
 			multiplication = false;
 			division = true;
-			correctAnswer = number1 / number2;
+			correctAnswer = Math.trunc(number1 / number2);
 			document.querySelector("#flashcardTitle").innerHTML = "Division Flashcards";
 			document.querySelector("#numbers").innerHTML = (number1 + " &#247; " + number2);
 		}
@@ -68,8 +68,6 @@
 
 		case userAnswer == correctAnswer && division === true:
 			document.querySelector("#output").innerHTML = "Correct! " + number1 + " &#247; " + number2 + " = " + correctAnswer + ".";
-			console.log(userAnswer);
-			console.log(correctAnswer);
 			break;
 
 		default:
@@ -78,7 +76,7 @@
 		}
 	});
 
-    document.querySelector("#nextCard").addEventListener("click", function() {
+	document.querySelector("#nextCard").addEventListener("click", function() {
 
         document.querySelector("#output").innerHTML = "";            
         document.querySelector("#answer").value = "";
@@ -95,7 +93,7 @@
 		correctAnswer = number1 * number2;
         document.querySelector("#numbers").innerHTML = (number1 + " x " + number2);
 		} else if (division === true) {
-		correctAnswer = number1 / number2;
+		correctAnswer = Math.trunc(number1 / number2);
         document.querySelector("#numbers").innerHTML = (number1 + " &#247; " + number2);
 		}
 	});
