@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 let addition, subtraction, multiplication, division = true;
 	let number1 = Math.floor((Math.random() * 10) + 1);
