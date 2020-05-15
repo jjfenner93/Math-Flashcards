@@ -39,7 +39,7 @@ let addition, subtraction, multiplication, division = true;
 			subtraction = false;
 			multiplication = false;
 			division = true;
-			correctAnswer = Math.trunc(number1 / number2);
+			correctAnswer = number1 / number2;
 			document.querySelector("#flashcardTitle").innerHTML = "Division Flashcards";
 			document.querySelector("#numbers").innerHTML = (number1 + " &#247; " + number2);
 		}
@@ -93,7 +93,7 @@ let addition, subtraction, multiplication, division = true;
 		correctAnswer = number1 * number2;
         document.querySelector("#numbers").innerHTML = (number1 + " x " + number2);
 		} else if (division === true) {
-		correctAnswer = Math.trunc(number1 / number2);
+		correctAnswer = number1 / number2;
         document.querySelector("#numbers").innerHTML = (number1 + " &#247; " + number2);
 		}
 	});
