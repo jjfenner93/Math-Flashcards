@@ -21,7 +21,7 @@ button:hover {
     color: yellow;
 }
 
-#borderaround {
+#defaultBorder {
     border: 10px solid yellow;
     border-width: 5px;
     border-radius: 10px;
