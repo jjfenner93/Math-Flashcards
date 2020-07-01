@@ -2,14 +2,17 @@
 <html lang="en-GB">
     <head>
         <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+	    	<!-- Adding this to the viewport meta tag above restores pre-Safari 9.0 behaviour. -->
 		<link rel="stylesheet" type="text/css" href="css/custom.css">
+	    	<!-- Add the CSS stylesheet above. -->
 		<title>Maths Flashcards</title>
     </head>
 <body>
 
     <nav>
-        <div id="borderaround">
+        <div id="defaultBorder"> <!-- Gives the tag the attribute id defaultBorder which is a CSS attribute and unique (only used on one tag). -->
+	<!-- It selects this and then you can edit the CSS e.g. #defaultBorder { color: red; } -->
             <button id="addition">Addition</button>
             <button id="subtraction">Subtraction</button>
             <button id="multiplication">Multiplication</button>
@@ -28,8 +31,10 @@
 
 		<footer>
 			<p class="center">&copy; Copyright 2020 Maths Flashcards / Joshua Fenner</p>
+			<!-- Give the tag the class attribute called center which is a CSS attribute can be reused on other tags. -->
+			<!-- It selects this and then you can edit the CSS e.g. .center { text-align: center; } -->
 		</footer>
 
-		<script src="js/custom.js"></script>
+		<script src="js/custom.js"></script> <!-- Includes the script custom.js and loads the JavaScript file into the page here. -->
 	</body>
 </html>
