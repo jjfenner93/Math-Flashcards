@@ -55,20 +55,20 @@ let addition, subtraction, multiplication, division = true;
 
 		switch(true) {
 
-		case userAnswer === correctAnswer && addition === true: // This will check if the answer is correct to the one input,
+		case userAnswer == correctAnswer && addition === true: // This will check if the answer is correct to the one input,
 		// and then it has to be the correct boolean value for the addition which needs to be true for the addition text in this case.
 			document.querySelector("#output").innerHTML = "Correct! " + number1 + " + " + number2 + " = " + correctAnswer + ".";
 			break;
 
-		case userAnswer === correctAnswer && subtraction === true:
+		case userAnswer == correctAnswer && subtraction === true:
 			document.querySelector("#output").innerHTML = "Correct! " + number1 + " - " + number2 + " = " + correctAnswer + ".";
 			break;
 
-		case userAnswer === correctAnswer && multiplication === true:
+		case userAnswer == correctAnswer && multiplication === true:
 			document.querySelector("#output").innerHTML = "Correct! " + number1 + " x " + number2 + " = " + correctAnswer + ".";
 			break;
 
-		case userAnswer === correctAnswer && division === true:
+		case userAnswer == correctAnswer && division === true:
 			document.querySelector("#output").innerHTML = "Correct! " + number1 + " &#247; " + number2 + " = " + correctAnswer + ".";
 			break;
 
