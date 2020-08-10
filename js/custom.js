@@ -85,7 +85,8 @@ let addition, subtraction, multiplication, division = true;
         number1 = Math.floor((Math.random() * 10) + 1); // Does a new equation for the user.
         number2 = Math.floor((Math.random() * 10) + 1);
 
-		if (addition === true) {
+		if (addition === true) { // The following code will generate a fresh new equation and the correct answer
+		// will be put into the variable to be checked later in the submitAnswer listen event (switch) above.
         correctAnswer = number1 + number2;
         document.querySelector("#numbers").innerHTML = (number1 + " + " + number2);
 		} else if (subtraction === true) {
