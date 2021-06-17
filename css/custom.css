@@ -1,5 +1,5 @@
 body {
-	border: 10px solid #183460;
+	border: 10px solid black;
 	border-width: 50px;
     display: inline-block;
     text-align: center;
@@ -9,7 +9,7 @@ body {
 button {
 	text-decoration: none;
     font-size: 15px;
-    border: 1px solid #45689e;
+    border: 1px solid black;
     border-width: 5px;
     background-color: black;
     color: white;
@@ -18,12 +18,11 @@ button {
 }
 
 button:hover {
-    color: yellow;
+    opacity: .7;
 }
 
 #defaultBorder {
-    border: 10px solid yellow;
     border-width: 5px;
     border-radius: 10px;
-    background-color: yellow;
+    margin: 1em;
 }
