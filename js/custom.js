@@ -3,7 +3,7 @@
 	let addition, subtraction, multiplication, division = true;
 	let rand1 = Math.floor((Math.random() * 10) + 1);
     let rand2 = Math.floor((Math.random() * 10) + 1);
-    let correctAnswer = rand1 + rand2;
+    let solution = rand1 + rand2;
 	let output;
 	addition = true;
 	document.querySelector("#numbers").innerHTML = (rand1 + " + " + rand2);
@@ -15,32 +15,28 @@
 			subtraction = false;
 			multiplication = false;
 			division = false;
-			correctAnswer = rand1 + rand2;
-			document.querySelector("#flashcardTitle").innerHTML = "Addition Flashcards";
+			solution = rand1 + rand2;
 			document.querySelector("#numbers").innerHTML = (rand1 + " + " + rand2);
 		} else if (this.id === "subtraction") {
 			addition = false;
 			subtraction = true;
 			multiplication = false;
 			division = false;
-			correctAnswer = rand1 - rand2;
-			document.querySelector("#flashcardTitle").innerHTML = "Subtraction Flashcards";
+			solution = rand1 - rand2;
 			document.querySelector("#numbers").innerHTML = (rand1 + " - " + rand2);
 		} else if (this.id === "multiplication") {
 			addition = false;
 			subtraction = false;
 			multiplication = true;
 			division = false;
-			correctAnswer = rand1 * rand2;
-			document.querySelector("#flashcardTitle").innerHTML = "Multiplication Flashcards";
+			solution = rand1 * rand2;
 			document.querySelector("#numbers").innerHTML = (rand1 + " x " + rand2);
 		} else if (this.id === "division") {
 			addition = false;
 			subtraction = false;
 			multiplication = false;
 			division = true;
-			correctAnswer = rand1 / rand2;
-			document.querySelector("#flashcardTitle").innerHTML = "Division Flashcards";
+			solution = rand1 / rand2;
 			document.querySelector("#numbers").innerHTML = (rand1 + " &#247; " + rand2);
 		}
 	});
@@ -54,20 +50,20 @@
 
 		switch(true) {
 
-		case answer == correctAnswer && addition === true:
-			document.querySelector("#output").innerHTML = "Correct! " + rand1 + " + " + rand2 + " = " + correctAnswer + ".";
+		case answer == solution && addition === true:
+			document.querySelector("#output").innerHTML = "Correct! " + rand1 + " + " + rand2 + " = " + solution + ".";
 			break;
 
-		case answer == correctAnswer && subtraction === true:
-			document.querySelector("#output").innerHTML = "Correct! " + rand1 + " - " + rand2 + " = " + correctAnswer + ".";
+		case answer == solution && subtraction === true:
+			document.querySelector("#output").innerHTML = "Correct! " + rand1 + " - " + rand2 + " = " + solution + ".";
 			break;
 
-		case answer == correctAnswer && multiplication === true:
-			document.querySelector("#output").innerHTML = "Correct! " + rand1 + " x " + rand2 + " = " + correctAnswer + ".";
+		case answer == solution && multiplication === true:
+			document.querySelector("#output").innerHTML = "Correct! " + rand1 + " x " + rand2 + " = " + solution + ".";
 			break;
 
-		case answer == correctAnswer && division === true:
-			document.querySelector("#output").innerHTML = "Correct! " + rand1 + " &#247; " + rand2 + " = " + correctAnswer + ".";
+		case answer == solution && division === true:
+			document.querySelector("#output").innerHTML = "Correct! " + rand1 + " &#247; " + rand2 + " = " + solution + ".";
 			break;
 
 		default:
@@ -84,16 +80,16 @@
         rand2 = Math.floor((Math.random() * 10) + 1);
 
 		if (addition === true) {
-        	correctAnswer = rand1 + rand2;
+        	solution = rand1 + rand2;
         	document.querySelector("#numbers").innerHTML = (rand1 + " + " + rand2);
 		} else if (subtraction === true) {
-			correctAnswer = rand1 - rand2;
+			solution = rand1 - rand2;
         	document.querySelector("#numbers").innerHTML = (rand1 + " - " + rand2);
 		} else if (multiplication === true) {
-			correctAnswer = rand1 * rand2;
+			solution = rand1 * rand2;
         	document.querySelector("#numbers").innerHTML = (rand1 + " x " + rand2);
 		} else if (division === true) {
-			correctAnswer = rand1 / rand2;
+			solution = rand1 / rand2;
         	document.querySelector("#numbers").innerHTML = (rand1 + " &#247; " + rand2);
 		}
 	});
