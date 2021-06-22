@@ -1,3 +1,3 @@
 # Maths-Flashcards
 
-Your basic maths all in one in an app (SPA)!
+Utilised JavaScript with expertly DOM coding to produce a calculator with arithmetic, ‘all in one’, in a single page application.
